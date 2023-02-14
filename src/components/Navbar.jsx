@@ -4,7 +4,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [logoText, setLogoText] = useState('Digital Dreamer');
   const handleMouseEnter = () => {
-    setLogoText('Dedicated Developer');
+    setLogoText('And a Dedicated Developer');
   };
 
   const handleMouseLeave = () => {
