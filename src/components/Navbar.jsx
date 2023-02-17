@@ -1,10 +1,15 @@
 import React from "react";
+import Home from "./Menu";
 import logo from "../assets/logo.svg";
 import { useState, useRef } from "react";
-import {AiFillGithub} from 'react-icons/ai'
-import {AiFillLinkedin} from 'react-icons/ai'
-import {AiFillYoutube} from 'react-icons/ai'
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai";
+import items from "../data";
 const Navbar = () => {
+  const [menuItems, setMenuItems] = useState(items);
+  const [categories, setCategories] = useState([]);
+
   const [logoText, setLogoText] = useState("Digital Dreamer");
   const handleMouseEnter = () => {
     setLogoText("Dedicated Developer");
@@ -67,7 +72,7 @@ const Navbar = () => {
               IoT
             </a>
           </div>
-          <div class="w-full py-3 text-center hover:text-pink-200" >
+          <div class="w-full py-3 text-center hover:text-pink-200">
             <a href="#features" class="block">
               VR / AR
             </a>
@@ -75,11 +80,21 @@ const Navbar = () => {
           <div class="w-full py-3 text-center hover:text-pink-200">
             <a href="#features" class="block">
               Crypto
-            </a> </div>
-            <div className="flex justify-center  bottom-0 absolute space-x-5">
-           <a href="https://github.com/eren-eroglu"> <AiFillGithub size={50}/></a><a href="https://www.linkedin.com/in/eroglueren/"> <AiFillLinkedin size={50}/></a><a href="https://www.youtube.com/channel/UCotJX6uiRsp9zbqeP6KKTzQ"><AiFillYoutube size={50}/></a>
-            </div>
-         
+            </a>{" "}
+          </div>
+          <div className="flex justify-center  bottom-0 absolute space-x-5">
+            <a href="https://github.com/eren-eroglu">
+              {" "}
+              <AiFillGithub size={50} />
+            </a>
+            <a href="https://www.linkedin.com/in/eroglueren/">
+              {" "}
+              <AiFillLinkedin size={50} />
+            </a>
+            <a href="https://www.youtube.com/channel/UCotJX6uiRsp9zbqeP6KKTzQ">
+              <AiFillYoutube size={50} />
+            </a>
+          </div>
         </div>
         <div className="group navbar-menus flex space-x-5 hidden md:flex font-vt text-3xl ">
           <a
