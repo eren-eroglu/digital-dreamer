@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const [logoText, setLogoText] = useState("Digital Dreamer");
   const handleMouseEnter = () => {
-    setLogoText("Dedicated Developer");
+    setLogoText("Eren Eroglu");
   };
 
   const handleMouseLeave = () => {
