@@ -6,10 +6,12 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
 import items from "../data";
+import { IoCloudyNightSharp } from "react-icons/io5";
+import { IoCloudyNightOutline } from "react-icons/io5";
 const Navbar = () => {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
-
+  const [darkMode, setDarkMode] = useState(false);
   const [logoText, setLogoText] = useState("Digital Dreamer");
   const handleMouseEnter = () => {
     setLogoText("Eren Eroglu");
@@ -32,15 +34,22 @@ const Navbar = () => {
       {/*Nav Container */}
       <nav className="flex  p-12  lg:w-full w-full">
         <main className="flex flex-1 justify-between">
-          <div>
+          <div className="flex">
             <h5
               className="logo font-comforter text-4xl md:text-4xl  md:text-left w-100 absolute md:relative flex-1 hover:border-purple-400  hover:text-pink-500	 transition-colors duration-200 ease-in-out select-none "
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               style={{ userSelect: "none" }}
             >
-              {logoText}
-            </h5>
+              <div className="flex ">
+                <div>{logoText}</div>
+            
+              </div>
+            </h5>    <div className="  flex justify-end w-[200px] absolute">{darkMode ? (
+                  <IoCloudyNightSharp className="hidden lg:block" size={25} />
+                ) : (
+                  <IoCloudyNightOutline className="hidden lg:block"size={25} />
+                )}</div>
           </div>
           <div className="md:hidden ">
             <button
