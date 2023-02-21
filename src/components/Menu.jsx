@@ -4,6 +4,7 @@ import iot from "../assets/iot.jpg";
 import vr from "../assets/vr.jpg";
 import crypto from "../assets/crypto.jpg";
 import Article from "./Article";
+import Sidebar from "./Sidebar";
 const imageMap = {
   "assets/ai.jpg": ai,
   "assets/iot.jpg": iot,
@@ -67,7 +68,9 @@ const Menu = ({ items, handle, showArticle }) => {
               );
             })}
           </div>
-          <div className="hidden md:w-2"></div>
+          <div>
+          <Sidebar/>
+          </div>
         </div>
       )}
     </div>
