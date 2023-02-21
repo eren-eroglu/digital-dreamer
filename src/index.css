@@ -63,3 +63,8 @@
   background-position: center;
   background-size: contain;
 }
+.body {
+  background-image: url(${bg});
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -5,6 +5,7 @@ import vr from "../assets/vr.jpg";
 import crypto from "../assets/crypto.jpg";
 import Article from "./Article";
 import Sidebar from "./Sidebar";
+import bg from "../assets/real.jpg"
 const imageMap = {
   "assets/ai.jpg": ai,
   "assets/iot.jpg": iot,
@@ -16,7 +17,7 @@ const Menu = ({ items, handle, showArticle }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${bg})` }} className="body">
       {showArticle ? (
         <div className="flex justify-center">
           <Article items={items} />
@@ -49,7 +50,7 @@ const Menu = ({ items, handle, showArticle }) => {
                         />
                       </div>
 
-                      <div className="title_and_desc  w-1/2">
+                      <div className="title_and_desc  w-1/2 bg-purple-500 bg-opacity-50 rounded-lg">
                         <a href="#" onClick={() => handle(id)}>
                           {" "}
                           <h4 className="mb-4 md:text-2xl text-lg font-extrabold leading-none tracking-tight md:p-3 m-5">
