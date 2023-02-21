@@ -8,7 +8,12 @@ import { AiFillYoutube } from "react-icons/ai";
 import items from "../data";
 import { IoCloudyNightSharp } from "react-icons/io5";
 import { IoCloudyNightOutline } from "react-icons/io5";
-const Navbar = () => {
+import { AiOutlineRobot } from "react-icons/ai";
+import { SiSmartthings } from "react-icons/si";
+import { Gi3DGlasses } from "react-icons/gi";
+import { SiEthereum } from "react-icons/si";
+import bgImg from "../assets/1876.jpg";
+const Navbar = ({ filterItems }) => {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
@@ -29,10 +34,14 @@ const Navbar = () => {
     menuRef.current.classList.toggle("flex");
     menuRef.current.classList.toggle("hidden");
   }
+
   return (
-    <section className="flex bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
+    <section
+      className="flex  "
+    
+    >
       {/*Nav Container */}
-      <nav className="flex  p-12  lg:w-full w-full">
+      <nav className="flex  p-12  lg:w-full w-full navbar-bg"style={{ backgroundImage: `url(${bgImg})` }}>
         <main className="flex flex-1 justify-between">
           <div className="flex">
             <h5
@@ -42,52 +51,76 @@ const Navbar = () => {
               style={{ userSelect: "none" }}
             >
               <div className="flex ">
-                <div>{logoText}</div>
-            
+                <div className="text-white">{logoText}</div>
               </div>
-            </h5>    <div className="  flex justify-end w-[200px] absolute">{darkMode ? (
-                  <IoCloudyNightSharp className="hidden lg:block" size={25} />
-                ) : (
-                  <IoCloudyNightOutline className="hidden lg:block"size={25} />
-                )}</div>
+            </h5>{" "}
+          
           </div>
           <div className="md:hidden ">
             <button
               id="menu-btn"
-              class="z-30 block md:hidden focus:outline-none hamburger"
+              className="z-30 block md:hidden focus:outline-none hamburger"
               type="button"
               ref={btnRef}
               onClick={navToggle}
             >
-              <span class="hamburger-top"></span>
-              <span class="hamburger-middle"></span>
-              <span class="hamburger-bottom"></span>{" "}
+              <span className="hamburger-top"></span>
+              <span className="hamburger-middle"></span>
+              <span className="hamburger-bottom"></span>{" "}
             </button>
           </div>
         </main>
         {/* Mobile Menu */}
         <div
           id="menu"
-          class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full   px-6 py-1 pt-24 pb-4 tracking-widest text-black uppercase divide-y divide-gray-500 bg-opacity-50 mt-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-200 ease-in-out"
+          className="fixed inset-0 z-20 hidden flex-col items-center self-end w-full   px-6 py-1 pt-24 pb-4 tracking-widest text-black uppercase divide-y divide-gray-500 bg-opacity-50 mt-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-200 ease-in-out"
           ref={menuRef}
         >
-          <div class="w-full py-3 text-center hover:text-pink-200">
-            <a href="#features" class="block">
+          <div className="w-full  py-3 text-center hover:text-pink-200 ">
+            <a
+              href="#features"
+              className="block"
+              onClick={() => {
+                filterItems("ai");
+                navToggle();
+              }}
+            >
               Artificial Intelligence
             </a>
           </div>
-          <div class="w-full py-3 text-center hover:text-pink-200">
-            <a href="#features" class="block">
+          <div className="w-full py-3 text-center hover:text-pink-200">
+            <a
+              href="#features"
+              className="block"
+              onClick={() => {
+                filterItems("iot");
+                navToggle();
+              }}
+            >
               IoT
             </a>
           </div>
-          <div class="w-full py-3 text-center hover:text-pink-200">
-            <a href="#features" class="block">
+          <div className="w-full py-3 text-center hover:text-pink-200">
+            <a
+              href="#features"
+              className="block"
+              onClick={() => {
+                filterItems("vr");
+                navToggle();
+              }}
+            >
               VR / AR
             </a>
           </div>
-          <div class="w-full py-3 text-center hover:text-pink-200">
-            <a href="#features" class="block">
+          <div className="w-full py-3 text-center hover:text-pink-200">
+            <a
+              href="#features"
+              className="block"
+              onClick={() => {
+                filterItems("crypto");
+                navToggle();
+              }}
+            >
               Crypto
             </a>{" "}
           </div>
@@ -108,27 +141,42 @@ const Navbar = () => {
         <div className="group navbar-menus flex space-x-5 hidden md:flex font-vt text-3xl ">
           <a
             href="#"
-            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 hover:text-white hover:border-black px-3  transition-colors duration-200 ease-in-out "
+            className="hidden bg-purple-500 bg-opacity-70 md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out flex flex-row"
+            onClick={() => filterItems("ai")}
           >
-            Artificial Intelligence
+            <div className="flex">
+              <AiOutlineRobot className="m-1 hidden lg:block" /> Artificial
+              Intelligence
+            </div>
           </a>
           <a
             href="#"
-            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 hover:text-white hover:border-black px-3  transition-colors duration-200 ease-in-out "
+            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70"
+            onClick={() => filterItems("iot")}
           >
-            IoT
+            <div className="flex">
+              <SiSmartthings className="m-1 hidden lg:block" />
+              IoT
+            </div>
           </a>
           <a
             href="#"
-            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 hover:text-white hover:border-black px-3  transition-colors duration-200 ease-in-out "
+            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70"
+            onClick={() => filterItems("vr")}
           >
-            VR / AR
+            <div className="flex">
+              <Gi3DGlasses className="m-1 hidden lg:block" /> VR / AR
+            </div>
           </a>
           <a
             href="#"
-            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 hover:text-white hover:border-black px-3  transition-colors duration-200 ease-in-out "
+            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70"
+            onClick={() => filterItems("crypto")}
           >
-            Crypto
+            <div className="flex">
+              <SiEthereum className="m-1 hidden lg:block" />
+              Crypto
+            </div>
           </a>
         </div>
       </nav>

@@ -19,24 +19,21 @@ const Menu = ({ items }) => {
         const imgSrc = imageMap[img];
 
         return (
-          <div className="flex lg:justify-center">
-          <main
-            key={id}
-            className="menu-item lg:w-1/2  flex flex-col text-center  m-5 "
-          >
-            <div className="flex">
-              <div className="img h-[200px] w-[200px]">
-                <img className="rounded-lg" src={imgSrc} alt="image" />
-              </div>
+          <div className="flex lg:justify-center " key={id}>
+            <main className="menu-item lg:w-1/2  flex flex-col text-center  m-5 ">
+              <div className="flex">
+                <div className="img h-[200px] w-[200px]">
+                  <img className="rounded-lg" src={imgSrc} alt="image" />
+                </div>
 
-              <div className="title_and_desc  w-1/2">
-                <h4 className="mb-4 md:text-2xl text-lg font-extrabold leading-none tracking-tight md:p-3 m-5">
-                  {title}
-                </h4>
-                <p className="pl-3">{description} </p>
+                <div className="title_and_desc  w-1/2">
+                  <h4 className="mb-4 md:text-2xl text-lg font-extrabold leading-none tracking-tight md:p-3 m-5">
+                    {title}
+                  </h4>
+                  <p className="pl-3">{description} </p>
+                </div>
               </div>
-            </div>
-          </main>
+            </main>
           </div>
         );
       })}

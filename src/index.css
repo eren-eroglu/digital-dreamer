@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 /* Hamburger Menu */
 .hamburger {
@@ -39,9 +38,9 @@
 
 .open {
   transform: rotate(90deg);
-  position:fixed;
-  top:50px;
-  right:25px;
+  position: fixed;
+  top: 50px;
+  right: 25px;
 }
 
 .open .hamburger-top {
@@ -57,4 +56,9 @@
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
   background-color: #fff;
+}
+
+.navbar-bg {
+  background-position: center;
+  background-size: contain;
 }
