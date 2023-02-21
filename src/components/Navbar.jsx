@@ -44,16 +44,17 @@ const Navbar = ({ filterItems }) => {
       <nav className="flex  p-12  lg:w-full w-full navbar-bg"style={{ backgroundImage: `url(${bgImg})` }}>
         <main className="flex flex-1 justify-between">
           <div className="flex">
-            <h5
-              className="logo font-comforter text-4xl md:text-4xl  md:text-left w-100 absolute md:relative flex-1 hover:border-purple-400  hover:text-pink-500	 transition-colors duration-200 ease-in-out select-none "
+            <div
+              className="logo font-comforter text-4xl md:text-4xl  md:text-left w-100 absolute md:relative flex-1 hover:border-purple-400  hover:text-pink-500	 transition-colors duration-200 ease-in-out "
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              style={{ userSelect: "none" }}
+             
             >
-              <div className="flex ">
-                <div className="text-white">{logoText}</div>
-              </div>
-            </h5>{" "}
+             
+              <div className="text-white" onClick={() => window.location.reload()} style={{cursor:'pointer'}}>{logoText}</div>
+
+              
+            </div>
           
           </div>
           <div className="md:hidden ">
@@ -66,7 +67,7 @@ const Navbar = ({ filterItems }) => {
             >
               <span className="hamburger-top"></span>
               <span className="hamburger-middle"></span>
-              <span className="hamburger-bottom"></span>{" "}
+              <span className="hamburger-bottom"></span>
             </button>
           </div>
         </main>

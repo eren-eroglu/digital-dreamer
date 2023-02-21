@@ -10,6 +10,7 @@ function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
   const [showAll, setShowAll] = useState(false);
+  const [showArticle, setShowArticle] = useState(false);
 
   const filterItems = (category) => {
     const newItems = items.filter((item) => item.category === category);
@@ -21,7 +22,12 @@ function App() {
 
   const handleButton = () => {
     setMenuItems(items);
-    setShowAll(false)
+    setShowAll(false);
+  };
+  const handleContent = (id) => {
+    const chosenOne = menuItems.find((item) => item.id === id);
+    setMenuItems([chosenOne]); // wrap the object in an array
+    setShowArticle(true);
   };
 
   return (
@@ -41,7 +47,11 @@ function App() {
       )}
 
       <Categories />
-      <Menu items={menuItems} />
+      <Menu
+        items={menuItems}
+        handle={handleContent}
+        showArticle={showArticle}
+      />
     </>
   );
 }
