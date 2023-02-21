@@ -17,7 +17,8 @@ const Menu = ({ items, handle, showArticle }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div style={{ backgroundImage: `url(${bg})` }} className="body">
+    <div style={{ backgroundImage: `url(${bg})` }} className="body bg-repeat h-full min-h-screen">
+   <div>
       {showArticle ? (
         <div className="flex justify-center">
           <Article items={items} />
@@ -74,6 +75,7 @@ const Menu = ({ items, handle, showArticle }) => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };

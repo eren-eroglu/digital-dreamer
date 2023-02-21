@@ -35,10 +35,10 @@ function App() {
       <Navbar filterItems={filterItems} />
 
       {showAll && (
-        <div className="text-center">
+        <div className="text-center w-full bg-black text-white">
           <button
             ref={buttonRef}
-            className="border border-purple-500 border-b-2 p-1 m-1 hover:bg-purple-400 hover:border-black transition-all duration-200 ease-in-out rounded-lg"
+            className="border border-purple-500 border-b-2 p-1 m-1 hover:bg-purple-400 hover:border-white hover:text-black transition-all duration-200 ease-in-out rounded-lg  "
             onClick={handleButton}
           >
             Show All
