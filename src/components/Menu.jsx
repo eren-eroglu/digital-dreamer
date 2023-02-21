@@ -4,7 +4,6 @@ import iot from "../assets/iot.jpg";
 import vr from "../assets/vr.jpg";
 import crypto from "../assets/crypto.jpg";
 import Article from "./Article";
-import { TwitterTweetEmbed } from 'react-twitter-embed';
 const imageMap = {
   "assets/ai.jpg": ai,
   "assets/iot.jpg": iot,
@@ -14,13 +13,13 @@ const imageMap = {
 
 const Menu = ({ items, handle, showArticle }) => {
   const [showMenu, setShowMenu] = useState(false);
- 
+
   return (
-  
     <div>
       {showArticle ? (
         <div className="flex justify-center">
-        <Article items={items}/></div>
+          <Article items={items} />
+        </div>
       ) : (
         <div className="flex flex-row">
           <div className="section-center lg:w-4/5 sm:w-full ">
@@ -68,11 +67,7 @@ const Menu = ({ items, handle, showArticle }) => {
               );
             })}
           </div>
-          <div className="hidden md:w-2">
-         
-          </div>
-          <div className="hidden lg:block flex justify-center items-center p-10">
-           <TwitterTweetEmbed tweetId="1626699992713818116" /></div>
+          <div className="hidden md:w-2"></div>
         </div>
       )}
     </div>
