@@ -13,6 +13,7 @@ import { SiSmartthings } from "react-icons/si";
 import { Gi3DGlasses } from "react-icons/gi";
 import { SiEthereum } from "react-icons/si";
 import bgImg from "../assets/1876.jpg";
+import mobileNavbar from "../assets/mobilenavbar.jpg"
 const Navbar = ({ filterItems }) => {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
@@ -74,10 +75,10 @@ const Navbar = ({ filterItems }) => {
         {/* Mobile Menu */}
         <div
           id="menu"
-          className="fixed inset-0 z-20 hidden flex-col items-center self-end w-full   px-6 py-1 pt-24 pb-4 tracking-widest text-black uppercase divide-y divide-gray-500 bg-opacity-50 mt-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-200 ease-in-out"
-          ref={menuRef}
+          className="fixed inset-0 z-20 hidden flex-col items-center self-end w-full   px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500    backdrop-blur-lg transition-all duration-200 ease-in-out bg-center space-y-4"
+          ref={menuRef} style={{ backgroundImage: `url(${mobileNavbar})` }}
         >
-          <div className="w-full  py-3 text-center hover:text-pink-200 ">
+          <div className="w-full  py-3 text-center hover:text-pink-200 bg-black rounded-full bg-opacity-50 ">
             <a
               href="#features"
               className="block"
@@ -89,7 +90,7 @@ const Navbar = ({ filterItems }) => {
               Artificial Intelligence
             </a>
           </div>
-          <div className="w-full py-3 text-center hover:text-pink-200">
+          <div className="w-full py-3 text-center bg-black rounded-full bg-opacity-50  hover:text-pink-200">
             <a
               href="#features"
               className="block"
@@ -101,7 +102,7 @@ const Navbar = ({ filterItems }) => {
               IoT
             </a>
           </div>
-          <div className="w-full py-3 text-center hover:text-pink-200">
+          <div className="w-full py-3 text-center  bg-black rounded-full bg-opacity-50 hover:text-pink-200">
             <a
               href="#features"
               className="block"
@@ -113,7 +114,7 @@ const Navbar = ({ filterItems }) => {
               VR / AR
             </a>
           </div>
-          <div className="w-full py-3 text-center hover:text-pink-200">
+          <div className="w-full py-3 text-center hover:text-pink-200 bg-black rounded-full bg-opacity-50">
             <a
               href="#features"
               className="block"
