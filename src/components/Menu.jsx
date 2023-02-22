@@ -19,7 +19,7 @@ const Menu = ({ items, handle, showArticle }) => {
   return (
     <div
       style={{ backgroundImage: `url(${bg})` }}
-      className="body bg-repeat h-full min-h-screen"
+      className="body md:bg-repeat h-full min-h-screen bg-center"
     >
       <div>
         {showArticle ? (
