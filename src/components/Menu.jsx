@@ -28,7 +28,7 @@ const Menu = ({ items, handle, showArticle }) => {
           </div>
         ) : (
           <div className="flex flex-row">
-            <div className="section-center lg:w-4/5 sm:w-full ">
+            <div className="section-center lg:w-full  sm:w-full ">
               {items.map((item) => {
                 const {
                   id,
@@ -55,7 +55,7 @@ const Menu = ({ items, handle, showArticle }) => {
                         </div>
 
                         <div className="title_and_desc  lg:w-1/2   rounded-lg">
-                       <a href="#" onClick={() => handle(id)}>
+                          <a href="#" onClick={() => handle(id)}>
                             {" "}
                             <h4 className="mb-4 md:text-2xl text-lg font-extrabold leading-none tracking-tight md:p-3 m-5">
                               {title}
@@ -65,9 +65,7 @@ const Menu = ({ items, handle, showArticle }) => {
                             <div>{description1}</div>
                             <div>{description2}</div>
                             <div>{description3}</div>{" "}
-                            <div className="img">
-                            
-                        </div>
+                            <div className="img"></div>
                           </div>
                         </div>
                       </div>
@@ -75,6 +73,9 @@ const Menu = ({ items, handle, showArticle }) => {
                   </div>
                 );
               })}
+            </div>{" "}
+            <div className="min-h-screen">
+              <Sidebar />
             </div>
           </div>
         )}

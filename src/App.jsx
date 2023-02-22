@@ -16,6 +16,7 @@ function App() {
     const newItems = items.filter((item) => item.category === category);
     setMenuItems(newItems);
     setShowAll(true);
+   
   };
 
   const buttonRef = useRef(null);
@@ -23,11 +24,13 @@ function App() {
   const handleButton = () => {
     setMenuItems(items);
     setShowAll(false);
+
   };
   const handleContent = (id) => {
     const chosenOne = menuItems.find((item) => item.id === id);
     setMenuItems([chosenOne]); // wrap the object in an array
     setShowArticle(true);
+    setShowAll(false);
   };
 
   return (
