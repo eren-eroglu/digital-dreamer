@@ -69,3 +69,7 @@
   background-repeat:repeat;
 }
 
+.mobile {
+  background-position: center;
+  background-size: contain;
+}
