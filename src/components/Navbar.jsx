@@ -143,17 +143,17 @@ const Navbar = ({ filterItems }) => {
         <div className="group navbar-menus flex space-x-5 hidden md:flex font-vt text-3xl ">
           <a
             href="#"
-            className="hidden bg-purple-500 bg-opacity-70 md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out flex flex-row"
+            className="hidden bg-purple-500 bg-opacity-70 md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:text-black hover:border-black px-3  transition-colors duration-200 ease-in-out flex flex-row"
             onClick={() => filterItems("ai")}
           >
-            <div className="flex">
+            <div className="flex ">
               <AiOutlineRobot className="m-1 hidden lg:block" /> Artificial
               Intelligence
             </div>
           </a>
           <a
             href="#"
-            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70"
+            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70 hover:text-black"
             onClick={() => filterItems("iot")}
           >
             <div className="flex">
@@ -163,7 +163,7 @@ const Navbar = ({ filterItems }) => {
           </a>
           <a
             href="#"
-            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70"
+            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70 hover:text-black"
             onClick={() => filterItems("vr")}
           >
             <div className="flex">
@@ -172,7 +172,7 @@ const Navbar = ({ filterItems }) => {
           </a>
           <a
             href="#"
-            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70"
+            className="hidden md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:border-black px-3  transition-colors duration-200 ease-in-out bg-purple-500 bg-opacity-70 hover:text-black"
             onClick={() => filterItems("crypto")}
           >
             <div className="flex">

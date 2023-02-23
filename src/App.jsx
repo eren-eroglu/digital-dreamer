@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar";
 import Menu from "./components/Menu";
 import Categories from "./components/Categories";
 import items from "./data";
-
+import Cursor from "./components/Cursor";
+import Footer from "./components/Footer";
 function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <>
+    <Cursor></Cursor>
       <Navbar filterItems={filterItems} />
 
       {showAll && (
@@ -60,6 +62,7 @@ function App() {
         handle={handleContent}
         showArticle={showArticle}
       />
+      <Footer/>
     </>
   );
 }

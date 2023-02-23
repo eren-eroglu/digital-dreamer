@@ -40,13 +40,14 @@ const Menu = ({ items, handle, showArticle }) => {
           <>
           <main className="flex flex-col">
             <section className="w-full flex justify-center items-center">
-          <div className="mb-8 w-4/5 md:</section>">
+          <div className="mb-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full">
           <input
             type="text"
-            className="w-full p-2 rounded-lg bg-blue-200 placeholder-purple-800"
+            className=" p-2 rounded-lg outline-none placeholder-purple-800 placeholder-black bg-transparent "
             placeholder="Search"
             value={searchTerm}
             onChange={handleSearch}
+           
           />
         </div></section>
             <div className="section-center w-full  md:w-3/4 lg:w-3/5 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -67,11 +68,11 @@ const Menu = ({ items, handle, showArticle }) => {
                 return (
                   <main
                     key={id}
-                    className="menu-item bg-purple-500 bg-opacity-50 rounded-lg flex flex-col" onClick={() => handle(id)}
+                    className="menu-item bg-purple-500 bg-opacity-50 rounded-lg flex flex-col border border-lg shadow-2xl border-black border-4" onClick={() => handle(id)}
                   >
-                    <div className="relative h-48 md:h-56">
+                    <div className="relative h-48 md:h-56 overflow-hidden">
                       <img
-                        className="rounded-t-lg object-cover absolute inset-0 h-full w-full cursor-pointer"
+                        className="rounded-t-lg object-cover absolute inset-0 h-full w-full cursor-pointer hover:scale-125 duration-200 ease-in-out"
                         src={imgSrc}
                         alt="image"
                         
