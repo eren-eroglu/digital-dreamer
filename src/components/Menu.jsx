@@ -7,6 +7,7 @@ import Article from "./Article";
 import Sidebar from "./Sidebar";
 import bg from "../assets/real.jpg";
 import { BsSearch } from "react-icons/bs";
+
 const imageMap = {
   "assets/ai.jpg": ai,
   "assets/iot.jpg": iot,
@@ -135,7 +136,7 @@ const Menu = ({ items, handle, showArticle }) => {
                 })}
               </div>
             </main>
-            <div className="hidden md:block">
+            <div className="hidden md:block lg:absolute sticky-top right-0">
               <Sidebar />
             </div>
           </>

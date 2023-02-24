@@ -13,7 +13,8 @@ import { SiSmartthings } from "react-icons/si";
 import { Gi3DGlasses } from "react-icons/gi";
 import { SiEthereum } from "react-icons/si";
 import bgImg from "../assets/1876.jpg";
-import mobileNavbar from "../assets/mobilenavbar.jpg"
+import mobileNavbar from "../assets/mobilenavbar.jpg";
+import { AiFillMail } from "react-icons/ai";
 const Navbar = ({ filterItems }) => {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
@@ -37,26 +38,27 @@ const Navbar = ({ filterItems }) => {
   }
 
   return (
-    <section
-      className="flex  "
-    
-    >
+    <section className="flex  ">
       {/*Nav Container */}
-      <nav className="flex  p-12  lg:w-full w-full navbar-bg"style={{ backgroundImage: `url(${bgImg})` }}>
+      <nav
+        className="flex  p-12  lg:w-full w-full navbar-bg"
+        style={{ backgroundImage: `url(${bgImg})` }}
+      >
         <main className="flex flex-1 justify-between">
           <div className="flex">
             <div
               className="logo font-comforter text-4xl md:text-4xl  md:text-left w-100 absolute md:relative flex-1 hover:border-purple-400  hover:text-pink-500	 transition-colors duration-200 ease-in-out "
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-             
             >
-             
-              <div className="text-white" onClick={() => window.location.reload()} style={{cursor:'pointer'}}>{logoText}</div>
-
-              
+              <div
+                className="text-white"
+                onClick={() => window.location.reload()}
+                style={{ cursor: "pointer" }}
+              >
+                {logoText}
+              </div>
             </div>
-          
           </div>
           <div className="md:hidden ">
             <button
@@ -76,7 +78,8 @@ const Navbar = ({ filterItems }) => {
         <div
           id="menu"
           className="fixed inset-0 z-20 hidden flex-col items-center self-end w-full   px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500    backdrop-blur-lg transition-all duration-200 ease-in-out bg-center space-y-4"
-          ref={menuRef} style={{ backgroundImage: `url(${mobileNavbar})` }}
+          ref={menuRef}
+          style={{ backgroundImage: `url(${mobileNavbar})` }}
         >
           <div className="w-full  py-3 text-center hover:text-pink-200 bg-black rounded-full bg-opacity-50 ">
             <a
@@ -134,6 +137,12 @@ const Navbar = ({ filterItems }) => {
             <a href="https://www.linkedin.com/in/eroglueren/">
               {" "}
               <AiFillLinkedin size={50} />
+            </a>{" "}
+            <a href="mailto:ereneroglu.dev@egmail.com">
+              <AiFillMail
+                className="text-white transition-colors duration-300 hover:text-purple-500 hover:cursor-pointer"
+                size={50}
+              />
             </a>
             <a href="https://www.youtube.com/channel/UCotJX6uiRsp9zbqeP6KKTzQ">
               <AiFillYoutube size={50} />
