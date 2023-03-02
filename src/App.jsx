@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>
-    <Cursor></Cursor>  {showAll && (
+  {showAll && (
         <div className="text-center w-full bg-black text-white">
           <button
             ref={buttonRef}

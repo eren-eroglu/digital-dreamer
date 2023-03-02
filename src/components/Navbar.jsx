@@ -15,6 +15,7 @@ import { SiEthereum } from "react-icons/si";
 import bgImg from "../assets/1876.jpg";
 import mobileNavbar from "../assets/mobilenavbar.jpg";
 import { AiFillMail } from "react-icons/ai";
+
 const Navbar = ({ filterItems }) => {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
@@ -38,6 +39,7 @@ const Navbar = ({ filterItems }) => {
   }
 
   return (
+
     <section className="flex  ">
       {/*Nav Container */}
       <nav
@@ -150,6 +152,7 @@ const Navbar = ({ filterItems }) => {
           </div>
         </div>
         <div className="group navbar-menus flex space-x-5 hidden md:flex font-vt text-3xl ">
+       
           <a
             href="#"
             className="hidden bg-purple-500 bg-opacity-70 md:block border-2 border-purple-400 p-1 rounded-lg hover:bg-purple-500 text-white hover:text-black hover:border-black px-3  transition-colors duration-200 ease-in-out flex flex-row"
@@ -189,9 +192,11 @@ const Navbar = ({ filterItems }) => {
               Crypto
             </div>
           </a>
+
         </div>
       </nav>
     </section>
+
   );
 };
 
