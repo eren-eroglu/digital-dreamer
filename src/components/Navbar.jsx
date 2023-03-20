@@ -20,7 +20,7 @@ const Navbar = ({ filterItems }) => {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
-  const [logoText, setLogoText] = useState("Digital Dreamer");
+  const [logoText, setLogoText] = useState("Eren Eroglu");
   const handleMouseEnter = () => {
     setLogoText("Eren Eroglu");
   };
